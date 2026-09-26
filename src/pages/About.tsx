@@ -20,6 +20,14 @@ export default function About() {
           <p className="text-muted-foreground leading-relaxed text-sm">
             When it drops here, it passed the check. That is the standard.
           </p>
+          <a
+            href="https://t.me/motionboys"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 font-display text-sm font-semibold tracking-wider uppercase hover:opacity-90 transition-opacity mt-2"
+          >
+            Join the Community <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start mb-20">
@@ -33,27 +41,8 @@ export default function About() {
               I started this because there was no store that felt like it was built for us. So I built it. Every item you see here, I have touched personally.
             </p>
             <p className="text-muted-foreground leading-relaxed text-sm">
-              I am reachable. Questions, sizing, specific requests — contact me directly.
+              Everything here is curated with intent. If it is not good enough, it does not make it to the store.
             </p>
-
-            <div className="flex gap-4 pt-2">
-              <a
-                href="https://wa.me/234XXXXXXXXXX"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-primary text-primary-foreground px-6 py-3 font-display text-sm font-semibold tracking-wider uppercase hover:opacity-90 transition-opacity inline-flex items-center gap-2"
-              >
-                WhatsApp <ArrowRight className="w-4 h-4" />
-              </a>
-              <a
-                href="https://t.me/motionboys"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-foreground text-foreground px-6 py-3 font-display text-sm font-semibold tracking-wider uppercase hover:bg-foreground hover:text-background transition-colors"
-              >
-                Telegram
-              </a>
-            </div>
           </div>
         </div>
 

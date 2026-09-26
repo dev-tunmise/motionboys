@@ -3,45 +3,58 @@ import { ArrowRight } from "lucide-react";
 import { useProducts } from "@/lib/products";
 import ProductCard from "@/components/ProductCard";
 import CountdownTimer from "@/components/CountdownTimer";
-import TelegramBanner from "@/components/TelegramBanner";
 import heroImage from "@/assets/hero-model.jpg";
 
 export default function Index() {
   const products = useProducts();
   const limitedDrops = products.filter((p) => p.isLimitedDrop && !p.isSoldOut);
-  const featured = products.filter((p) => !p.isSoldOut).slice(0, 4);
+  const featured = products.filter((p) => !p.isSoldOut).slice(0, 6);
 
   return (
     <main>
-      <TelegramBanner />
-
-      {/* Hero */}
-      <section className="relative min-h-screen flex items-center">
+      <section className="relative h-screen flex items-center">
         <div className="absolute inset-0 overflow-hidden">
           <img
             src={heroImage}
             alt=""
             className="absolute right-0 top-1/2 -translate-y-1/2 h-[75%] w-auto object-contain opacity-25 translate-x-[10%]"
           />
-          <div className="absolute inset-0 opacity-10" style={{
-            backgroundImage: "linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)",
-            backgroundSize: "60px 60px"
-          }} />
+          <div
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)",
+              backgroundSize: "60px 60px",
+            }}
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-background/40" />
         </div>
 
-        <div className="relative container py-32 md:py-0 space-y-6">
+        <div className="relative container space-y-6">
           <div className="space-y-3 max-w-xl">
-            <p className="text-xs tracking-[0.4em] uppercase text-muted-foreground font-display animate-fade-in-up">Lagos — 2026</p>
-            <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight leading-[0.95] animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-              Move<br />Different.
+            <p className="text-xs tracking-[0.4em] uppercase text-muted-foreground font-display animate-fade-in-up">
+              Lagos — 2026
+            </p>
+            <h1
+              className="text-5xl md:text-7xl font-display font-bold tracking-tight leading-[0.95] animate-fade-in-up"
+              style={{ animationDelay: "0.1s" }}
+            >
+              Move
+              <br />
+              Different.
             </h1>
-            <p className="text-muted-foreground text-sm md:text-base max-w-sm animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <p
+              className="text-muted-foreground text-sm md:text-base max-w-sm animate-fade-in-up"
+              style={{ animationDelay: "0.2s" }}
+            >
               Sneakers, canvas, slides. Curated for the boys who know what they want on their feet.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-3 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          <div
+            className="flex flex-col sm:flex-row gap-3 animate-fade-in-up"
+            style={{ animationDelay: "0.3s" }}
+          >
             <Link
               to="/shop"
               className="bg-primary text-primary-foreground px-8 py-3 font-display text-sm font-semibold tracking-wider uppercase hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
@@ -58,7 +71,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Limited Drops Banner */}
       {limitedDrops.length > 0 && (
         <section className="border-b border-border">
           <div className="container py-4 flex items-center justify-between">
@@ -75,12 +87,15 @@ export default function Index() {
         </section>
       )}
 
-      {/* Featured */}
-      <section className="container py-20">
+      <section className="container py-12">
         <div className="flex items-end justify-between mb-10">
           <div>
-            <p className="text-xs tracking-[0.4em] uppercase text-muted-foreground font-display mb-2">Fresh Picks</p>
-            <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight">Featured</h2>
+            <p className="text-xs tracking-[0.4em] uppercase text-muted-foreground font-display mb-2">
+              Fresh Picks
+            </p>
+            <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight">
+              Featured
+            </h2>
           </div>
           <Link
             to="/shop"
@@ -89,27 +104,47 @@ export default function Index() {
             View All <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {featured.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </section>
 
-      {/* Brand Statement */}
       <section className="border-t border-border">
-        <div className="container py-20 md:py-28 text-center max-w-2xl mx-auto space-y-4">
-          <p className="text-xs tracking-[0.4em] uppercase text-muted-foreground font-display">What We Are About</p>
-          <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight leading-tight">
-            No noise. Just the right kicks.
-          </h2>
-          <p className="text-muted-foreground max-w-md mx-auto text-sm leading-relaxed">
-            Thrift finds, clean canvas, proper slides. Everything here has been picked. If it is up, it passed the check.
-          </p>
+        <div className="container py-16 md:py-20">
+          <div className="max-w-xl">
+            <p className="text-xs tracking-[0.4em] uppercase text-muted-foreground font-display mb-3">
+              The Community
+            </p>
+            <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight mb-4">
+              Join the boys.
+            </h2>
+            <p className="text-muted-foreground text-sm leading-relaxed mb-8">
+              See drops before anyone else. Ask questions. Link with the community. Everything happens on Telegram first.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="https://t.me/motionboys"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary text-primary-foreground px-8 py-3 font-display text-sm font-semibold tracking-wider uppercase hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
+              >
+                Join Telegram <ArrowRight className="w-4 h-4" />
+              </a>
+              <a
+                href="https://wa.me/234XXXXXXXXXX"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-foreground text-foreground px-8 py-3 font-display text-sm font-semibold tracking-wider uppercase hover:bg-foreground hover:text-background transition-colors text-center"
+              >
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="border-t border-border">
         <div className="container py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div>
