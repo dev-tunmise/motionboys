@@ -108,22 +108,15 @@ export default function Shop() {
           </div>
         )}
 
-        <div className="border-t border-border mt-20 pt-16">
-          <div className="max-w-md">
-            <p className="text-xs tracking-[0.4em] uppercase text-muted-foreground font-display mb-3">The Community</p>
-            <h3 className="text-2xl font-display font-bold tracking-tight mb-3">Not ready to shop?</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              Join the Telegram. See drops first and stay in the loop.
-            </p>
-            <a
-              href="https://t.me/motionboys"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 font-display text-sm font-semibold tracking-wider uppercase hover:opacity-90 transition-opacity"
-            >
-              Join Telegram <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
+        <div className="border-t border-border mt-20 pt-12 flex justify-center">
+          <a
+            href="https://t.me/motionboys"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 border border-border text-muted-foreground px-6 py-3 font-display text-xs tracking-wider uppercase hover:text-foreground hover:border-foreground transition-colors"
+          >
+            Join Our Community <ArrowRight className="w-3.5 h-3.5" />
+          </a>
         </div>
       </div>
     </main>

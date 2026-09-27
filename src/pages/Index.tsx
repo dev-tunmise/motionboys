@@ -123,24 +123,14 @@ export default function Index() {
             <p className="text-muted-foreground text-sm leading-relaxed mb-8">
               See drops before anyone else. Ask questions. Link with the community. Everything happens on Telegram first.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a
-                href="https://t.me/motionboys"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-primary text-primary-foreground px-8 py-3 font-display text-sm font-semibold tracking-wider uppercase hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
-              >
-                Join Telegram <ArrowRight className="w-4 h-4" />
-              </a>
-              <a
-                href="https://wa.me/234XXXXXXXXXX"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-foreground text-foreground px-8 py-3 font-display text-sm font-semibold tracking-wider uppercase hover:bg-foreground hover:text-background transition-colors text-center"
-              >
-                WhatsApp Us
-              </a>
-            </div>
+            <a
+              href="https://t.me/motionboys"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary text-primary-foreground px-8 py-3 font-display text-sm font-semibold tracking-wider uppercase hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2"
+            >
+              Join Telegram <ArrowRight className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </section>
